@@ -1,0 +1,5 @@
+estudiante:
+  name: Estudiante Demo
+  email: estudiante@balancefood.cl
+  password_digest: <%= BCrypt::Password.create("Password123") %>
+  current_balance: 40000
