@@ -1,0 +1,11 @@
+pastel:
+  restaurant: casino
+  name: Pastel de choclo
+  price: 3800
+  available: true
+
+cazuela:
+  restaurant: casino
+  name: Cazuela de vacuno
+  price: 6500
+  available: true
