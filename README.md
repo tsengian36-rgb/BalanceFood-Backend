@@ -65,25 +65,6 @@ El recomendador divide el saldo por los días hábiles (lunes a viernes) que que
 
 Precios y montos son enteros en pesos chilenos. Las reglas (`price > 0`, `amount > 0`, `current_balance >= 0`) se validan en los modelos y además con check constraints en PostgreSQL.
 
-## Tests
-
-```bash
-bin/rails test
-```
-
-- `test/controllers/api/v1/auth_logout_test.rb`: el mismo token recibe 401 después del logout.
-- `test/services/budget_recommendation_service_test.rb`: presupuesto diario en saldo crítico, medio y holgado, y último día hábil del mes.
-- `test/controllers/api/v1/restaurants_test.rb`: CRUD completo y respuestas 401, 404 y 422.
-
-## Documentación Swagger
-
-```bash
-RAILS_ENV=test bin/rails rswag:specs:swaggerize   # genera swagger/v1/swagger.yaml
-bin/rails s
-```
-
-La documentación queda en http://localhost:3000/api-docs.
-
 ## Flujo de trabajo
 
 Ramas `feat/*` → PR a `release` → PR de `release` a `main`. Cada PR contiene un solo cambio con un commit.
