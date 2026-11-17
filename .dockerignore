@@ -1,0 +1,21 @@
+# Archivos que no deben entrar a la imagen de produccion.
+/.git/
+/.gitignore
+
+/.bundle
+/.env*
+
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/storage/*
+
+/spec
+/test
+/.rspec
+
+/Jenkinsfile
+/Dockerfile*
+/.dockerignore
+/README.md

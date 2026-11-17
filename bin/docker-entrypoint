@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+# Migra la base antes de levantar el servidor. Se usa db:migrate y no db:prepare para que
+# no corra db/seeds.rb (crea un usuario de prueba con contrasena conocida) en produccion.
+# La base debe existir (se crea una vez en el servidor); aqui solo se aplican migraciones.
+if [ "${1}" == "bundle" ] && [ "${2}" == "exec" ] && [ "${3}" == "rails" ] && [ "${4}" == "server" ]; then
+  bundle exec rails db:migrate
+fi
+
+exec "${@}"
